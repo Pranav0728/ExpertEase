@@ -17,12 +17,12 @@ const App = () => {
         <Routes >
           <Route  index path="/" element={ <Hero />} />
         </Routes>
-        <Footer />
-        
+       
+
         <Routes >
           <Route path='/ContactUs' element={<ContactForm/>}/>
         </Routes>
-       
+        <Footer />
       </BrowserRouter> 
       <ButtonGradient />
 
