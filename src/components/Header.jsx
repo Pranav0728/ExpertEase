@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-
+import { Link } from 'react-router-dom';
 import { brainwave, yourlogo , brainwaveSymbol} from "../assets";
 import { navigation } from "../constants";
 import Button from "./Button";
@@ -36,11 +36,12 @@ const Header = () => {
       }`}
     >
       <div className="flex items-center  px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-      
+      <Link to = "/" >
         <a className="relative z-2 flex flex-col items-center justify-center lg:flex-row" href="#hero">
           <img src={brainwaveSymbol} width={50} height={50} alt="ExpertEase" />
           <h1 className=" text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-4xl dark:text-white">{" "}ExpertEase</h1>
         </a>
+        </Link>
 
         <nav
           className={`${
@@ -68,9 +69,9 @@ const Header = () => {
 
           <HamburgerMenu />
         </nav>
-        <Button className="hidden lg:flex" href="#">
-          Contact Us
-        </Button>
+        <Link to = "/ContactUs" >
+        <Button className="hidden lg:flex" href={`/ContactUS`}>Contact US</Button>
+        </Link>         
 
         <Button
           className="ml-auto lg:hidden"
