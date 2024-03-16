@@ -8,11 +8,16 @@ import { useRef } from "react";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
+import Pricing from "./Pricing";
+import Roadmap from "./Roadmap";
+import Services from "./Services";
+import Benefits from "./Benefits";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
 
   return (
+    <div>
     <Section
       className="pt-[12rem] -mt-[5.25rem]"
       crosses
@@ -94,9 +99,16 @@ const Hero = () => {
 
         {/* <CompanyLogos className="hidden relative z-10 mt-20 lg:block" /> */}
       </div>
-
+      {/* <ContactForm/> */}
       <BottomLine />
+
     </Section>
+    < Benefits/>
+    <Pricing/>
+    <Roadmap/>
+
+    </div>
+    
   );
 };
 
